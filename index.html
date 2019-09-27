@@ -1,0 +1,544 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8">
+ <title>新知网——首页</title> 
+ <style type="text/css"> 
+    *{-webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+     }
+    .list{     
+            border:0;    
+            height:25px;     
+            width:60px;     
+            background:#36F;     
+            color:#fff;
+            margin:-10px 0 0 0px;
+            font-size:12px;
+         } 
+    .input{     
+            width:400px;     
+            height:36px;
+            margin:20px 0 0 60px;
+          
+            } 
+    .btn{         
+            width:100px;     
+            height:36px;     
+            background:#36F;     
+            font-size:15px;     
+            color:#fff;
+            margin:20px 0 0 0px;
+        } 
+     .little{
+    font-size: 12px;
+    color: #666;
+     line-height: 24px;
+     margin: 0 0 0 15px;
+     list-style-type: none;
+
+        }
+    .little:hover{
+    font-weight: bolder;
+        text-decoration: underline;
+        }
+    .img1{
+    margin: 0 0 0 20px;
+        }  
+    .img1:hover{
+        transform: scale(1.02);
+        box-shadow: 2px 1px 0 0 rgba(0, 0, 0,0.5);
+    }   
+   .toTop{
+    position: fixed;
+    right: 90px;
+    bottom: 60px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    display: none;
+    background: url(images/img.index/toup.jpg) no-repeat 0px 0px;
+    }
+    #header{
+            width: 950px;
+            height: 130px;
+            margin: 0 auto;
+        }
+    #nav{
+            width: 650px;
+            height: 30px;
+            float:right;
+            /*background-color: #336699;*/
+            border-top:15px solid #003366;
+        }
+    #nav ul{
+            width: 650px;
+            height: 30px;
+            
+            }
+    #nav ul li{
+        float:right;
+            margin: 0 0 0 30px;
+            font-size:14px ;
+            text-decoration: none;
+            color:#000;
+            list-style-type: none ;
+            float:left;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            }
+    #nav ul li:hover{
+            font-weight: bolder;
+            }
+    .logo{
+            width: 270px;
+            height: 145px;
+            margin: -70px 0 0 2px;
+    }
+    #register{
+            width: 950px;
+            height: 100px;
+            float:left;
+            margin:20px 0px 0 0px;
+            
+         }
+    #register ul{
+            float:right;
+            margin: -90px 0 0 0;
+         }
+    #register ul li {
+            list-style-type: none ;
+            float:left;
+            font-size:14px;     
+            font-family:"宋体";     
+            color:#000;
+            line-height: 24px;
+            text-decoration:underline;
+                }
+    #register ul li:hover{
+            color:#cc0033;
+            
+    }
+    #up{
+        width: 950px;
+        height: 360px;
+       
+        /*border-bottom:1px solid #ccc;*/
+        margin: 0 auto;
+    } 
+    #nav2{
+            width: 950px;
+            height: 30px;
+            background-color: #336699;
+            position: fixed;
+            float:left;
+        }
+    #nav2 ul{
+            width: 950px;
+            height: 30px;
+            margin: 0 0 0 20px;
+            }
+    #nav2 ul li{
+            list-style-type: none ;
+            float:left;
+            width:60px;
+            text-align: center;
+            line-height: 30px;
+            color:#fff;
+            text-decoration:underline;
+            }
+    #nav2 ul li:hover{
+            color:#cccc00;
+            text-decoration:underline;
+            }
+
+    #img{ 
+            width: 560px;
+            height: 304px;
+            overflow: hidden;
+            float:left;
+            margin: 15px 0 0 0.5px;
+        }
+    #arrow{
+            width: 560px;
+            height: 30px;
+            position:relative;
+            top:-180px;
+        }
+    #previous,#next{
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.1);
+            font-size: 50px;
+            line-height: 40px;
+            text-align: center;
+            cursor:pointer;
+        }
+    #previous{
+            color: #fff;
+            float:left;
+            }
+    #next{
+            color: #fff;
+            float:right;
+        }
+    #circle{
+            width: 420px;
+            height: 30px;
+            position:relative;
+            top:-45px;
+            overflow:hidden; 
+            margin: 0 0 0 20px;
+            }
+    #circle h1{
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.6);
+            /*font-family:"宋体";   */
+            color:#fff;
+            font-size: 16px;
+            text-align: left;
+            line-height: 30px;
+            text-decoration: none;
+        }
+    #news{
+            float:left;
+            margin: -270px 0 0 580px;
+        }
+    #news ul{
+            border-left:1px solid #ccc;
+            margin: -60px 0 0 0px;
+                }
+    #news ul li{
+            list-style-type: none;
+            font-size: 12px;
+            line-height: 24px;
+            color: #666; 
+            padding:0 0 0 20px;
+        }
+    #news ul li:nth-child(5n+2){
+            font-size: 16px;
+            font-family:"黑体";
+            font-weight: bolder;
+            color: #000;
+            background:rgba(0, 0, 0 ,.0) url(images/img.index/dot.index.jpg) no-repeat 0 50%; 
+        }
+    #news ul li:hover{
+          color:#cc0033;
+          text-decoration: underline;
+    }
+
+    #below{
+            width: 950px;
+            height: 650px;
+            margin: 0 auto;
+        }
+    #left{
+            width: 350px;
+            height:500px;
+            float:left;
+            margin: 0 0 0 -30px;
+        }
+    #left ul li{
+        list-style-type: none;
+            font-size: 12px;
+            line-height: 24px;
+            color: #666; 
+            padding:0 0 0 30px;
+    }
+    #left ul li:nth-child(6n+1){
+        font-size: 16px;
+        font-family:"黑体";
+        color:#000;
+        font-weight: bolder;
+        list-style-type: none;
+        background:rgba(0, 0, 0 ,.0) url(images/img.index/dot.index.jpg) no-repeat 0 50%; 
+    }
+    #left ul li:hover{
+        color:#cc0033;
+        text-decoration: underline;
+    }
+    #middle{
+        width: 240px;
+        height:500px;
+        float:left;
+        margin: 50px 0 0 0 ;
+    }
+    #middle ul{
+        border-left:1px solid #ccc;
+        border-right:1px solid #ccc;
+    }
+    #middle ul li{
+         list-style-type: none;
+    }
+    #right{
+        width:350px;
+        height:500px;
+        float:left;
+    }
+    #right ul li{
+        list-style-type: none;
+        font-size: 12px;
+        line-height: 30px;
+        color: #666; 
+        padding:0 0 0 30px; 
+    }
+     #right ul li:nth-child(5n+1){
+        font-size: 16px;
+        font-family:"黑体";
+        font-weight: bolder;
+        color: #000;
+        background:rgba(0, 0, 0 ,.0) url(images/img.index/dot.index.jpg) no-repeat 0 50%; 
+    }
+    #right ul li:hover{
+        color:#cc0033;
+        text-decoration: underline;
+    }
+   #footer{
+            width: 950px;
+            height: 150px;
+            /*margin: 80px 0 0 0;*/
+            margin: 0 auto;            
+            background-color: #336699;
+        }
+    #footer p{
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        line-height: 30px;
+    }
+    </style> 
+</head> 
+<body> 
+<a id="toTop" class="toTop" href="#"></a>
+  <div id="header">
+    <div id="nav">
+        <ul>
+            <li>网页</li>
+            <li>新闻</li>
+            <li>贴吧</li>
+            <li>知道</li>
+            <li>图片</li>
+            <li>音乐</li>
+            <li>视频</li>
+            <li>文库</li>
+        </ul>
+    </div>
+    
+<div id="register">
+<img  class="logo"src="images/img.index/logo.jpg" >
+    <ul >
+        <li><input class="input" type="text" value="" /></li>
+        <li><input class="btn" type="submit" value="点击搜索" name="submit" /> </li> 
+        <li><a href="新知网—登录注册.html" target="" >登录</a></li>
+        <li><img src="images/img.index/linkr.index.jpg" alt="" /></li>
+        <li>设置</li>
+        <li><img src="images/img.index/linkr.index.jpg" alt="" /></li>
+        <input class="list" type="submit" value="更多产品" name="submit" />
+    </ul>
+   </div > 
+</div >
+       
+<div id="up"> 
+<div id="nav2" class="top">
+ <ul>
+            <li>首页</li> 
+            <li>国内</li>
+            <li>国际</li>
+            <li>政治</li>
+            <li>军事</li>
+            <li>财经</li>
+            <li>房产</li>
+            <li><a href="新知网—互联网.html" target="" >互联网</a></li>
+            <li>其他</li>
+        </ul>
+    </div>  
+        <div id="img">
+            <img src="images/img.index/fy1.index.jpg" alt="" />
+            <img src="images/img.index/fy2.index.jpg" alt="" />
+            <img src="images/img.index/fy3.index.jpg" alt="" />
+            <img src="images/img.index/fy4.index.jpg" alt="" />
+            <img src="images/img.index/fy5.index.jpg" alt="" />
+            <img src="images/img.index/fy6.index.jpg" alt="" />
+        </div>
+        <div id="arrow">
+            <div id="previous"><</div>
+            <div id="next">></div>
+        </div>
+        <div id="circle">
+            <h1>国家科学技术奖励大会在北京隆重举行</h1>
+            <h1>“动妹”礼仪培训 苦练内功备战春运</h1>
+            <h1>“小鸽子”鼓起脱贫大志气</h1>
+            <h1>墨西哥“油战”加剧 民众提空油桶“占领”加油站</h1>
+            <h1>全国多地迎降雪 民众出行秒变“雪人”</h1>
+            <h1>迎春灯饰点亮山城 新年城市景色美如画</h1>
+        </div>
+        <div id="news">
+            <ul >
+                <li><img src="images/img.index/XW1.index.jpg" alt="" /></li>
+                <li>习近平以创新点燃科技强国引擎</li>
+                <li>让惩恶扬善利剑永不蒙尘</li>
+                <li>正风肃纪 久久为功 </li>
+                <li>简单明了，3分钟看懂2018年度国家科技奖励成果</li>
+                <li>从长期大势认识当前形势  镜头中的脱贫故事 </li>
+                <li>伟大梦想是拼出来干出来的</li>
+                <li>潮涌珠江两岸阔——改革开放的“广东实践”</li>
+                <li>个税专项附加扣除遇到问题怎么解？</li>
+                <li>视频 | “权健事件”追踪！警方首次介绍调查进展</li>
+                <li>中央政法委牵头调查"千亿矿权案"卷宗丢失等问题</li>
+            </ul>     
+       </div>  
+</div>     
+
+<div id="below">
+
+    <div id="left">
+     <img src="images/img.index/XW7.index.jpg" alt="" />
+        <ul>
+       
+                <li>这种违法犯罪行为，不得适用缓刑</li>
+                <li>媒体：百度拿下2019年央视春晚红包互动权</li>
+                <li>“扬子江时代”开启 国家级江北新区驶入发展快车道</li>
+                <li>南京江宁一社区3000多亩耕地秸秆还田促环保</li>
+                
+                <li>广东惠州惠阳一栋在建居民楼发生坍塌，已有一人被救出</li>
+                <li>金晖当选北京东城区区长，孙军民当选顺义区区长</li>
+                <li>打好作风建设持久战，习近平这些话要牢记</li>
+                <li>历史性一刻！北京市委和市政府牌匾从原址摘下</li>
+                <li>赣州市举办“110宣传日”警民座谈会</li>
+                <li>宣师一附小伤童后续：学校维修工因不被续签合同宣泄不满</li>
+                <li>湖南省委统战部原副部长汤新华获刑5年：巨额财产来源..</li>
+                <li>金晖当选北京东城区区长，孙军民当选顺义区区长</li>
+        </ul>
+        <img src="images/img.index/XW14.index.jpg" alt="" />
+        <ul>
+            <li>【足坛简讯】1月11日</li>
+            <li>1月12日NBA常规赛火箭VS骑士比赛前瞻</li>
+            <li>得分创新高！德里克-怀特对雷霆23+5+8集锦</li>
+            <li>胡金秋：不介意吃饼称号，对于MVP顺其自然</li>
+            <li>阿莱尼亚：轮换不是输球的借口，不会在更衣室谈论内马..</li>
+            <li>英超-曼联1-0热刺6连胜 拉师傅破门德赫亚11次..</li>
+        </ul>
+
+    </div> 
+    <div id="middle">
+    <ul>
+        <li > <img src="images/img.index/XW11.index.jpg" class="img1" alt="" /></li>
+        <li class="little">63岁的何立峰继续担任国家发展改委主任</li>
+        <li ><img src="images/img.index/XW12.index.jpg"  class="img1" alt="" /></li>
+        <li class="little">住建部：把外来务工人口、城市无房户等……</li>
+        <img src="images/img.index/XW15.index.jpg" class="img1" alt="" />
+        <li class="little">埃登的挨蹬指数……</li>
+    </ul>
+       
+    </div>
+    <div id="right">
+        <img src="images/img.index/XW8.index.jpg" alt="" />
+            <ul>
+                <li>特朗普讲话引民主党强硬回击</li>
+                <li>英媒曝俄前间谍父女仍在英国 俄方称英国强制扣押俄公民</li>
+                <li>贝索斯离婚或失去一半财富，亚马逊股东们很担忧</li>
+                <li>日本要花160亿日元买下马毛岛 让美军机搞训练</li>
+                <li>英媒曝俄前间谍父女仍在英国 俄方称英国强制扣押俄公民</li>
+                 <li>一名涉嫌向法国巴黎恐袭提供军火嫌疑人被捕 </li>
+                <li>特雷莎·梅政府在议会表决中失利 无协议脱欧面临新障碍</li>
+                <li>美媒：卫星图像显示伊朗正持续推进遥感卫星发射工作</li>
+                <li>伊朗军官放狠话：美国若袭击伊朗 就端了它的基地</li>
+                <li>阿富汗首都遭爆炸袭击，已导致至少4人死亡90人受伤</li>
+            </ul>
+            <img class="img1" src="images/img.index/XW13.index.jpg" alt="" />
+            <li class="little">纽约或成美国首个带薪休假城市</li>
+    </div> 
+</div>
+<a id="toTop" class="toTop" href="#"></a>
+<div id="footer">
+    <p>Copyright © 2010 All Rights Reserved 新知网Http://www.xinzhi.com.com 网站地图</p>
+    <p> 闽ICP备08009495号-1 联系我们：E-mail：xinzhiweinisuozhi.com </p>
+    <p>本站为非营利性个人网站，为网友提供生活常识等公益内容，转载文章以及图片版权归原作者所有，如有侵权请联系我们将及时处理。 <p>
+    <p>用户协议 隐私策略 投诉中心 京公网安备1101101101101110号 互联网新闻信息服务许可 ©20190112</p>
+</div>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    //当点击跳转链接后，回到页面顶部位置
+        $(function () {
+            $(window).scroll(function(){if ($(window).scrollTop()>80){
+                    $("#toTop").fadeIn(300);
+                }
+                else
+                {
+                    $("#toTop").fadeOut(300);
+                }
+            });
+            $("#toTop").click(function(){
+                $('body,html').animate({scrollTop:0},300);
+                return false;
+            });
+        });
+        //导航停留
+            jQuery(function(){
+            var top=$(".top").offset().top;
+            $(window).scroll(function () { 
+                if ($(window).scrollTop() >= top) {
+                 $(".top").attr("style", "position:fixed;top:0;");
+                  } 
+                  else {
+                   $(".top").removeAttr("style");
+                    }
+                }).trigger("scroll");
+        });
+        var n=0;//记录当前图片序号
+        function slideImg(){
+            n++;
+            if(n>$("#circle h1").length-1){
+                n=0;
+            }
+            $("#img img").hide();//隐藏所有图片
+            $("#img img").eq(n).fadeIn();//显示索引图片
+            $("#circle h1").hide();//隐藏所有字幕
+            $("#circle h1").eq(n).show();//对应n的字幕出现
+            $("#dot h1").removeClass("red");//去掉所有red类
+            $("#dot h1").eq(n).addClass("red");//索引值加类
+        }
+        var intrval=setInterval(slideImg,5000);//5s自动翻页
+        $(document).ready(function() {
+            $("#dot h1").mouseover(function(event){
+                    //点击圆点图片变换
+                    n=$("#dot h1").index(this);//获取索引值
+                    $("#img img").hide();//隐藏所有图片
+                    $("#img img").eq(n).fadeIn();//显示索引图片
+                    $("#circle h1").hide();//隐藏所有字幕
+                    $("#circle h1").eq(n).fadeIn();//对应n的字幕出现
+                   
+                    });
+            //点击左箭头
+            $("#previous").click(function(event){
+                n--;
+                if(n<0){
+                    n=$("#circle h1").length-1;
+                }
+                $("#img img").hide();//隐藏所有图片
+                $("#img img").eq(n).fadeIn();//显示索引图片
+                $("#circle h1").hide();//隐藏所有字幕
+                $("#circle h1").eq(n).fadeIn();//对应n的字幕出现
+               
+            });
+            //点击右箭头
+            $("#next").click(function(event){
+                n++;
+                if(n>$("#circle h1").length-1){
+                    n=0;
+                }
+                $("#img img").hide();//隐藏所有图片
+                $("#img img").eq(n).fadeIn();//显示索引图片
+                $("#circle h1").hide();//隐藏所有字幕
+                $("#circle h1").eq(n).fadeIn();//对应n的字幕出现
+            });
+        });
+    </script>        
+
+</body>
+
+</html>
